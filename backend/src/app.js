@@ -18,7 +18,9 @@ import { orderRouter } from "./routes/orders.js";
 import { adminRouter } from "./routes/admin.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-const frontendPath = path.resolve(here, "../../frontend");
+const frontendPath = process.env.VERCEL
+  ? path.resolve(here, "../runtime-frontend")
+  : path.resolve(here, "../../frontend");
 const PgStore = connectPgSimple(session);
 
 function standalonePage(filename, fallback) {

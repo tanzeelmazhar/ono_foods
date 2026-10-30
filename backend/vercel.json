@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "buildCommand": "npm run db:migrate && npm run db:seed",
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 30,
+      "includeFiles": ["public/**", "runtime-frontend/**"]
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ]
+}

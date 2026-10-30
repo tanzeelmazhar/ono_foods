@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { catalogCategories, catalogItems } from "../../frontend/js/catalog-data.js";
+import { catalogCategories, catalogItems } from "../runtime-frontend/js/catalog-data.js";
 import { pool, withTransaction } from "../src/db.js";
 
 const legacyVariants = new Map([

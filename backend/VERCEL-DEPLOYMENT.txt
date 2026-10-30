@@ -1,0 +1,27 @@
+ONO Food - Vercel deployment files
+
+This backend folder is the Vercel project root.
+It contains:
+- api/index.js: Express serverless entry point
+- vercel.json: Vercel routing, build, and runtime file configuration
+- public/: static assets served by Vercel
+- runtime-frontend/: HTML pages and runtime frontend files used by Express
+
+Configure these Vercel environment variables before deployment:
+DATABASE_URL=<Neon pooled connection string>
+DATABASE_SSL=true
+SESSION_SECRET=<random secret, at least 32 characters>
+TRACKING_SECRET=<different random secret, at least 32 characters>
+NODE_ENV=production
+COOKIE_SECURE=true
+COOKIE_SAME_SITE=lax
+STORE_TIMEZONE=Asia/Karachi
+STORE_OPEN_TIME=11:00
+STORE_CLOSE_TIME=24:00
+MIN_ORDER_SUBTOTAL=500.00
+
+The configured build command runs database migrations and the catalog seed.
+Create the first owner/admin account separately using the project's admin:create script
+with ADMIN_BOOTSTRAP_EMAIL, ADMIN_BOOTSTRAP_NAME, ADMIN_BOOTSTRAP_PHONE,
+and ADMIN_BOOTSTRAP_PASSWORD set temporarily in a trusted local environment.
+Do not commit secrets or put them in source files.

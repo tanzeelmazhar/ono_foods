@@ -11,6 +11,8 @@ export function loadConfig(env = process.env) {
   if (!env.DATABASE_URL) throw new Error("DATABASE_URL is required.");
   const frontendOrigins = new Set((env.FRONTEND_ORIGINS || "http://localhost:3000").split(",").map((origin) => origin.trim()).filter(Boolean));
   if (env.RENDER_EXTERNAL_URL) frontendOrigins.add(env.RENDER_EXTERNAL_URL.replace(/\/$/, ""));
+  if (env.VERCEL_URL) frontendOrigins.add(`https://${env.VERCEL_URL}`);
+  if (env.VERCEL_PROJECT_PRODUCTION_URL) frontendOrigins.add(`https://${env.VERCEL_PROJECT_PRODUCTION_URL}`);
   return {
     port: Number(env.PORT || 3000), host: env.HOST || "127.0.0.1", nodeEnv, databaseUrl: env.DATABASE_URL,
     databaseSsl: env.DATABASE_SSL === "true", sessionSecret: env.SESSION_SECRET,
