@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#DDB242">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ONO Food | Owner workspace</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <script src="/js/config.js" defer></script>
+  <script type="module" src="/js/admin.js"></script>
+</head>
+<body class="admin-body">
+  <header class="admin-topbar">
+    <a class="wordmark" href="/" aria-label="ONO Food storefront"><img class="brand-mark" src="/images/ono-profile.jpg" alt="" width="100" height="100"><span class="wordmark-sub">OWNER<br>WORKSPACE</span></a>
+    <div class="admin-top-actions"><a href="/" class="admin-store-link">View storefront</a><button id="admin-sign-out" class="text-button" type="button" hidden>Sign out</button></div>
+  </header>
+
+  <main class="admin-main">
+    <section id="admin-login" class="admin-login" aria-labelledby="login-title">
+      <p class="eyebrow">ONO FOOD / KARACHI</p>
+      <h1 id="login-title">Owner sign in</h1>
+      <p class="muted-copy">Use your admin account to manage orders and the live menu.</p>
+      <p id="admin-file-notice" class="admin-file-notice" hidden>This file cannot connect to the database. Start the website first, then <a href="http://localhost:3000/admin">open the live admin dashboard</a>.</p>
+      <form id="admin-login-form" class="admin-form">
+        <label>Email address<input name="email" type="email" autocomplete="username" required maxlength="254"></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+        <button class="button button-dark" type="submit">Sign in</button>
+      </form>
+      <p id="login-message" class="inline-message" role="status"></p>
+    </section>
+
+    <section id="admin-dashboard" hidden>
+      <div class="admin-heading">
+        <div><p class="eyebrow">OWNER WORKSPACE</p><h1>Operations</h1></div>
+        <span id="admin-welcome" class="admin-welcome"></span>
+      </div>
+      <section class="store-control" aria-labelledby="store-status-title">
+        <div class="store-control-copy">
+          <span id="store-status-indicator" class="store-status-indicator" aria-hidden="true"></span>
+          <div><p class="eyebrow">ORDER INTAKE</p><h2 id="store-status-title">Checking store status</h2><p id="store-status-description" class="muted-copy">Loading the latest order setting.</p></div>
+        </div>
+        <button class="button button-outline" id="store-status-toggle" type="button" disabled>Loading status</button>
+      </section>
+      <p id="store-status-message" class="inline-message" role="status"></p>
+      <nav class="admin-tabs" aria-label="Admin sections">
+        <button type="button" data-view="orders" aria-current="page">Orders</button>
+        <button type="button" data-view="menu">Menu</button>
+        <button type="button" data-view="categories">Categories</button>
+        <button type="button" data-view="zones">Delivery zones</button>
+        <button type="button" data-view="sales">Sales</button>
+      </nav>
+
+      <section class="admin-view" id="view-orders">
+        <div class="admin-section-heading"><div><p class="eyebrow">ORDER QUEUE</p><h2>Incoming orders</h2></div><div class="admin-controls"><label class="sr-label" for="order-status-filter">Filter by status</label><select id="order-status-filter"><option value="">All statuses</option><option>Pending</option><option>Preparing</option><option>Out for Delivery</option><option>Delivered</option><option>Cancelled</option></select><button class="button button-outline" type="button" data-refresh="orders">Refresh</button></div></div>
+        <div id="order-counts" class="count-strip" aria-live="polite"></div>
+        <div id="orders-table" class="table-wrap"></div>
+        <p id="orders-message" class="inline-message" role="status"></p>
+      </section>
+
+      <section class="admin-view" id="view-menu" hidden>
+        <div class="admin-section-heading"><div><p class="eyebrow">CATALOG</p><h2>Menu items</h2></div><div class="admin-controls"><label class="sr-label" for="menu-admin-search">Search menu</label><input id="menu-admin-search" type="search" placeholder="Search menu"><button class="button button-dark" type="button" id="new-menu-item">Add menu item</button></div></div>
+        <div id="menu-admin-list" class="admin-record-list"></div>
+        <p id="menu-admin-message" class="inline-message" role="status"></p>
+      </section>
+
+      <section class="admin-view" id="view-categories" hidden>
+        <div class="admin-section-heading"><div><p class="eyebrow">MENU STRUCTURE</p><h2>Categories</h2></div></div>
+        <form id="new-category-form" class="inline-create-form"><label>Category name<input name="category_name" required maxlength="80"></label><label>Description<input name="description" maxlength="1000"></label><label>Display order<input name="display_order" type="number" value="0"></label><button class="button button-dark" type="submit">Add category</button></form>
+        <div id="category-admin-list" class="admin-record-list"></div>
+        <p id="category-message" class="inline-message" role="status"></p>
+      </section>
+
+      <section class="admin-view" id="view-zones" hidden>
+        <div class="admin-section-heading"><div><p class="eyebrow">DELIVERY SETTINGS</p><h2>Delivery zones</h2></div></div>
+        <form id="new-zone-form" class="inline-create-form"><label>Zone name<input name="zone_name" required maxlength="100"></label><label>Delivery fee (PKR)<input name="delivery_fee" type="number" min="0" step="0.01" required></label><label>Coverage notes<input name="coverage_notes" maxlength="1000"></label><button class="button button-dark" type="submit">Add zone</button></form>
+        <div id="zone-admin-list" class="admin-record-list"></div>
+        <p id="zone-message" class="inline-message" role="status"></p>
+      </section>
+
+      <section class="admin-view" id="view-sales" hidden>
+        <div class="admin-section-heading"><div><p class="eyebrow">PERFORMANCE</p><h2>Delivered order summary</h2></div></div>
+        <form id="sales-form" class="sales-filter"><label>From<input name="from" type="date" required></label><label>To<input name="to" type="date" required></label><button class="button button-dark" type="submit">View summary</button></form>
+        <div id="sales-totals" class="sales-totals"></div>
+        <div id="sales-table" class="table-wrap"></div>
+        <p class="sales-disclaimer">Values reflect orders marked Delivered. Cash on Delivery collection is not verified by this system.</p>
+        <p id="sales-message" class="inline-message" role="status"></p>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="surface-dialog admin-dialog" id="menu-item-dialog" aria-labelledby="menu-dialog-title">
+    <form id="menu-item-form" class="dialog-content">
+      <div class="dialog-heading"><div><p class="eyebrow">CATALOG</p><h2 id="menu-dialog-title">Add menu item</h2></div><button class="icon-close" type="button" data-close="menu-item-dialog" aria-label="Close">x</button></div>
+      <input type="hidden" name="item_id">
+      <div class="form-grid">
+        <label>Item name<input name="item_name" required maxlength="140"></label>
+        <label>Category<select name="category_id" required></select></label>
+        <label>Base price (PKR)<input name="base_price" type="number" min="0" step="0.01" required></label>
+        <label>Image URL or local image path <span class="optional-label">Optional</span><input name="image_url" type="text" maxlength="2000" placeholder="/images/creamy-cheesy-tikka-pizza.jpg"></label>
+        <label class="field-wide">Description<textarea name="description" maxlength="2000" rows="2"></textarea></label>
+        <label class="field-wide">Size options <span class="optional-label">One per line: name | price</span><textarea name="sizes_text" rows="3" placeholder="Regular | 850"></textarea></label>
+        <label class="field-wide">Add-ons <span class="optional-label">One per line: name | price</span><textarea name="addons_text" rows="3" placeholder="Extra cheese | 150"></textarea></label>
+        <label class="check-label field-wide"><input name="availability_status" type="checkbox" checked> In stock and available for ordering</label>
+      </div>
+      <p id="menu-item-form-message" class="inline-message" role="status"></p>
+      <div class="dialog-actions"><button class="button button-dark" type="submit">Save item</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="surface-dialog admin-dialog" id="order-detail-dialog" aria-labelledby="order-detail-title">
+    <div class="dialog-content"><div class="dialog-heading"><div><p class="eyebrow">ORDER DETAIL</p><h2 id="order-detail-title">Order</h2></div><button class="icon-close" type="button" data-close="order-detail-dialog" aria-label="Close">x</button></div><div id="order-detail-content"></div></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#DDB242">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ONO Food | Owner workspace</title>
+  <style nonce="__CSP_NONCE__">
+:root {
+  color-scheme: light;
+  --forest: #2b2525;
+  --forest-deep: #201c1c;
+  --tomato: #b98b24;
+  --paprika: #89691b;
+  --sun: #ddb242;
+  --sage: #f2e7c8;
+  --cream: #fff9e9;
+  --paper: #fffdf8;
+  --ink: #2b2525;
+  --muted: #6e6559;
+  --line: #ddd5c5;
+  --white: #ffffff;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); }
+button, input, textarea, select { font: inherit; }
+button, select { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .52; }
+a { color: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.service-strip {
+  min-height: 34px;
+  padding: 7px clamp(16px, 5vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--forest-deep);
+  color: #f7f3e7;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.service-strip a { color: var(--sun); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.service-separator { width: 1px; height: 12px; background: #766a54; }
+.service-state { color: var(--sun); }
+
+.site-header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  min-height: 78px;
+  padding: 12px clamp(16px, 5vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.wordmark { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; color: var(--forest); }
+.brand-mark { width: 46px; height: 46px; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 3px; object-fit: cover; }
+.wordmark-main, .footer-wordmark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: .9;
+}
+.wordmark-sub { max-width: 76px; font-size: 9px; font-weight: 800; line-height: 1.25; }
+.header-actions { display: flex; align-items: center; gap: clamp(12px, 2.5vw, 32px); }
+.header-button, .text-link, .cart-button {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+.header-button, .text-link { padding: 12px 2px; }
+.header-button:hover, .text-link:hover { color: var(--tomato); }
+.cart-button {
+  min-height: 44px;
+  padding: 8px 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--forest);
+  border-radius: 4px;
+}
+.cart-button:hover { background: var(--forest); color: var(--white); }
+.cart-count {
+  min-width: 22px;
+  height: 22px;
+  padding: 2px 5px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--sun);
+  color: var(--forest-deep);
+  font-size: 11px;
+}
+
+.menu-intro {
+  position: relative;
+  min-height: 280px;
+  padding: 48px clamp(18px, 8vw, 112px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  overflow: hidden;
+  background: var(--sun);
+  color: var(--ink);
+}
+.intro-copy { position: relative; z-index: 1; }
+.eyebrow {
+  margin: 0 0 13px;
+  color: var(--tomato);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.menu-intro .eyebrow { color: var(--forest-deep); }
+.eyebrow span { padding: 0 5px; }
+.menu-intro h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 53px;
+  font-weight: 700;
+  line-height: 1.02;
+}
+.menu-intro h1 em { color: var(--cream); font-weight: 400; }
+.intro-note { margin: 15px 0 0; color: #332c20; font-size: 14px; }
+.menu-hero-frame { position: relative; width: min(320px, 28vw); height: 232px; flex: 0 1 320px; }
+.menu-hero-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 58%; border: 1px solid rgba(43, 37, 37, .3); }
+.menu-hero-frame.portrait-hero-video { width: min(260px, 20vw); height: auto; aspect-ratio: 9 / 16; flex: 0 0 auto; overflow: hidden; background: #171411; }
+.menu-hero-frame.portrait-hero-video .menu-hero-image { border: 0; object-fit: contain; object-position: center; }
+.hours-stamp {
+  position: relative;
+  z-index: 1;
+  min-width: 192px;
+  padding: 17px 20px;
+  display: grid;
+  gap: 7px;
+  border: 1px solid rgba(43, 37, 37, .48);
+  color: var(--forest-deep);
+}
+.stamp-label, .stamp-foot { font-size: 9px; font-weight: 700; text-transform: uppercase; }
+.stamp-label { color: var(--forest-deep); }
+.stamp-time { font-family: Georgia, "Times New Roman", serif; font-size: 19px; }
+.stamp-time b { color: var(--paprika); font-family: "Trebuchet MS", sans-serif; font-size: 9px; }
+.stamp-foot { color: #5f563f; }
+
+.menu-section { max-width: 1280px; margin: 0 auto; padding: 48px clamp(16px, 5vw, 64px) 66px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; }
+.section-heading h2, .track-bar h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.minimum-note { margin: 0 0 5px; color: var(--muted); font-size: 12px; }
+.menu-tools { margin: 25px 0 16px; display: flex; align-items: center; gap: 20px; }
+.search-field {
+  width: min(100%, 480px);
+  min-height: 46px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+}
+.search-symbol { color: var(--tomato); font-size: 12px; font-weight: 800; }
+.search-field input { width: 100%; border: 0; outline: 0; background: transparent; font-size: 14px; }
+.search-field input:focus-visible { outline: none; }
+kbd { padding: 2px 6px; border: 1px solid var(--line); border-radius: 3px; color: var(--muted); font-size: 11px; }
+.availability-toggle { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; cursor: pointer; }
+.availability-toggle input { width: 17px; height: 17px; accent-color: var(--forest); }
+.category-list {
+  margin: 0 0 25px;
+  padding: 0 0 2px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.category-chip {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+.category-chip:hover, .category-chip[aria-pressed="true"] { border-color: var(--forest); background: var(--forest); color: var(--white); }
+.menu-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 22px; }
+.menu-card { min-width: 0; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+.menu-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.35;
+  margin-bottom: 14px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--sage);
+}
+.menu-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hot-seller-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px 10px;
+  background: var(--forest-deep);
+  color: var(--sun);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.reveal-card { opacity: 0; transform: translateY(14px); transition: opacity .42s ease, transform .42s ease; }
+.reveal-card.is-visible { opacity: 1; transform: translateY(0); }
+.photo-fallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--cream);
+  color: var(--forest);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 50px;
+}
+.stock-label {
+  position: absolute;
+  left: 9px;
+  bottom: 9px;
+  padding: 6px 8px;
+  background: var(--forest-deep);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.menu-card-top { display: flex; align-items: start; justify-content: space-between; gap: 10px; }
+.menu-card h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 21px; font-weight: 600; }
+.menu-category { margin: 5px 0 0; color: var(--muted); font-size: 10px; text-transform: uppercase; }
+.menu-description { min-height: 36px; margin: 11px 0 16px; color: #645c52; font-size: 12px; line-height: 1.5; }
+.review-link { margin: -5px 0 14px; padding: 3px 0; display: inline-flex; align-items: center; gap: 7px; border: 0; background: transparent; color: var(--muted); font-size: 11px; text-align: left; }
+.review-link:hover { color: var(--paprika); text-decoration: underline; text-underline-offset: 3px; }
+.review-stars { color: #a97711; letter-spacing: 0; white-space: nowrap; }
+.menu-card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.menu-price { color: var(--forest); font-size: 14px; font-weight: 800; white-space: nowrap; }
+.menu-add {
+  min-width: 82px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid var(--forest);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 800;
+}
+.menu-add:hover:not(:disabled) { background: var(--forest); color: white; }
+.menu-add:disabled { border-color: var(--line); color: var(--muted); }
+.menu-empty { padding: 48px 16px 22px; text-align: center; }
+.menu-empty h3 { margin: 12px 0 7px; font-family: Georgia, "Times New Roman", serif; font-size: 26px; font-weight: 500; }
+.menu-empty > p:last-child { margin: 0; color: var(--muted); font-size: 13px; }
+.plate-mark { position: relative; width: 86px; height: 86px; margin: 0 auto 18px; border: 1px solid var(--forest); border-radius: 50%; }
+.plate-mark span { position: absolute; inset: 9px; border: 1px solid var(--line); border-radius: 50%; }
+.plate-mark i { position: absolute; top: -4px; right: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--tomato); }
+.inline-message { min-height: 16px; margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+.inline-message.error { color: var(--paprika); }
+.inline-message.success { color: var(--forest); }
+.service-link { display: inline-flex; align-items: center; margin-top: 8px; text-decoration: none; }
+.service-link[hidden] { display: none; }
+
+.track-bar {
+  padding: 28px clamp(16px, 8vw, 112px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--tomato);
+  color: var(--white);
+}
+.track-bar .eyebrow { color: var(--sun); }
+.track-bar h2 { font-size: 27px; }
+.track-form { width: min(100%, 420px); display: flex; gap: 8px; }
+.track-form input { min-width: 0; flex: 1; min-height: 44px; padding: 10px 12px; border: 1px solid rgba(255,255,255,.75); border-radius: 3px; background: var(--white); }
+.site-footer {
+  min-height: 92px;
+  padding: 20px clamp(16px, 5vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.footer-wordmark { color: var(--forest); font-size: 25px; text-decoration: none; }
+.footer-brand { width: 52px; height: 52px; border: 1px solid var(--line); border-radius: 3px; object-fit: cover; }
+.site-footer a:last-child { color: var(--forest); font-weight: 700; text-underline-offset: 3px; }
+
+.button {
+  min-height: 44px;
+  padding: 11px 16px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.button-light { background: var(--cream); color: var(--forest-deep); }
+.button-light:hover { background: var(--sun); }
+.button-dark { background: var(--forest); color: var(--white); }
+.button-dark:hover { background: var(--forest-deep); }
+.button-red { background: var(--sun); color: var(--forest-deep); }
+.button-red:hover { background: var(--tomato); }
+.button-wide { width: 100%; }
+
+.surface-dialog {
+  width: min(540px, calc(100vw - 28px));
+  max-width: none;
+  max-height: min(88dvh, 820px);
+  padding: 0;
+  overflow: auto;
+  border: 0;
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 18px 70px rgba(16, 28, 21, .25);
+}
+.surface-dialog::backdrop { background: rgba(12, 23, 17, .58); }
+.dialog-content { padding: 24px; }
+.dialog-heading { margin-bottom: 20px; display: flex; align-items: start; justify-content: space-between; gap: 18px; }
+.dialog-heading .eyebrow { margin-bottom: 7px; }
+.dialog-heading h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 27px; font-weight: 600; }
+.icon-close {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1;
+}
+.icon-close:hover { border-color: var(--tomato); color: var(--tomato); }
+.drawer-dialog { width: min(480px, 100vw); height: 100dvh; max-height: 100dvh; margin: 0 0 0 auto; border-radius: 0; }
+.drawer-dialog .dialog-content { min-height: 100%; display: flex; flex-direction: column; }
+.cart-lines { display: grid; gap: 0; }
+.cart-line { padding: 15px 0; display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; border-bottom: 1px solid var(--line); }
+.cart-line h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 17px; font-weight: 600; }
+.cart-line p { margin: 4px 0 0; color: var(--muted); font-size: 11px; }
+.cart-line-total { grid-column: 2; grid-row: 1 / span 2; align-self: center; font-size: 12px; font-weight: 800; }
+.quantity-controls { display: flex; align-items: center; gap: 10px; }
+.quantity-controls button { width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 3px; background: transparent; }
+.quantity-controls button:hover { border-color: var(--forest); }
+.remove-line { padding: 6px 0; border: 0; background: transparent; color: var(--tomato); font-size: 11px; font-weight: 700; text-align: left; }
+.cart-summary { margin: auto 0 16px; padding-top: 18px; }
+.cart-summary > div { display: flex; justify-content: space-between; gap: 16px; margin: 7px 0; font-size: 12px; }
+.cart-summary > div:first-child { font-size: 14px; }
+.cart-summary strong { color: var(--forest); }
+.payment-line { margin: 14px 0 0; padding-top: 12px; display: flex; justify-content: space-between; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.payment-line strong { color: var(--ink); }
+.dialog-actions { margin-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.dialog-price { font-size: 14px; font-weight: 800; }
+.option-group { margin: 18px 0; }
+.option-group legend { margin-bottom: 9px; font-size: 12px; font-weight: 800; }
+.option-choice { padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.option-choice input { width: 17px; height: 17px; accent-color: var(--forest); }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.form-grid label { min-width: 0; display: grid; gap: 6px; color: #4f473f; font-size: 11px; font-weight: 700; }
+.form-grid input, .form-grid textarea, .form-grid select {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: white;
+  color: var(--ink);
+  font-size: 13px;
+}
+.form-grid textarea { min-height: 70px; resize: vertical; }
+.field-wide { grid-column: 1 / -1; }
+.optional-label { color: var(--muted); font-weight: 400; }
+.checkout-total { margin: 20px 0 14px; padding: 13px 0; display: flex; justify-content: space-between; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 13px; }
+.checkout-total strong { color: var(--forest); font-size: 17px; }
+.segmented { margin-bottom: 18px; padding: 3px; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-radius: 4px; }
+.segmented button { min-height: 38px; border: 0; border-radius: 3px; background: transparent; color: var(--muted); font-size: 12px; font-weight: 700; }
+.segmented button.selected { background: var(--forest); color: white; }
+.account-orders { margin-top: 22px; }
+.account-orders h3 { margin: 0 0 10px; font-family: Georgia, "Times New Roman", serif; font-size: 18px; }
+.account-order-row { padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); font-size: 12px; }
+.account-order-row button, .text-button { border: 0; background: transparent; color: var(--tomato); font-size: 11px; font-weight: 800; }
+.text-button { margin-top: 16px; padding: 6px 0; }
+.order-status-block { padding: 16px; background: var(--cream); }
+.order-status-name { margin: 0; color: var(--forest); font-family: Georgia, "Times New Roman", serif; font-size: 24px; }
+.order-status-meta { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
+.tracked-line { padding: 13px 0; display: grid; grid-template-columns: 1fr auto; gap: 5px 12px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.tracked-line > strong { white-space: nowrap; }
+.order-review-form, .submitted-review { grid-column: 1 / -1; padding: 12px; background: #f5f0e4; }
+.rating-picker { margin: 0 0 10px; padding: 0; display: flex; align-items: center; gap: 3px; border: 0; }
+.rating-picker legend { margin-bottom: 4px; color: var(--muted); font-size: 11px; }
+.rating-picker label { position: relative; cursor: pointer; color: #967a43; font-size: 25px; line-height: 1; }
+.rating-picker input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.rating-picker label:has(input:checked), .rating-picker label:has(input:focus-visible) { color: #9a6410; }
+.rating-picker label:has(input:focus-visible) { outline: 2px solid var(--sun); outline-offset: 2px; }
+.review-input-label { margin-bottom: 9px; display: grid; gap: 6px; color: var(--muted); font-size: 11px; }
+.review-input-label textarea { width: 100%; padding: 9px; border: 1px solid var(--line); border-radius: 3px; resize: vertical; }
+.button-outline { min-height: 40px; padding: 9px 14px; border: 1px solid var(--forest); border-radius: 3px; background: transparent; color: var(--forest); font-size: 11px; font-weight: 800; }
+.button-outline:hover { background: var(--forest); color: white; }
+.submitted-review p { margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.public-review { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.public-review > div { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; }
+.public-review time { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; }
+.public-review p { margin: 9px 0 0; color: #645c52; font-size: 12px; line-height: 1.55; }
+.muted-copy { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.status-history { margin: 18px 0 0; padding: 0; list-style: none; }
+.status-history li { padding: 9px 0 9px 17px; position: relative; border-left: 1px solid var(--line); font-size: 12px; }
+.status-history li::before { content: ""; position: absolute; top: 13px; left: -4px; width: 7px; height: 7px; border-radius: 50%; background: var(--tomato); }
+.status-history time { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }
+.toast {
+  position: fixed;
+  z-index: 30;
+  right: 18px;
+  bottom: 18px;
+  max-width: min(360px, calc(100vw - 36px));
+  padding: 12px 16px;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  background: var(--forest-deep);
+  color: white;
+  font-size: 12px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.toast.visible { transform: translateY(0); opacity: 1; }
+
+@media (max-width: 850px) {
+  .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .menu-intro { min-height: 250px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(160px, 220px); grid-template-areas: "copy image" "hours image"; align-items: center; gap: 10px 24px; padding: 35px clamp(20px, 5vw, 48px); }
+  .intro-copy { grid-area: copy; }
+  .menu-intro h1 { font-size: 46px; }
+  .hours-stamp { grid-area: hours; justify-self: start; min-width: 0; padding: 12px 16px; }
+  .menu-hero-frame { grid-area: image; width: 100%; height: 200px; }
+  .menu-hero-frame.portrait-hero-video { width: 100%; max-width: 250px; height: auto; aspect-ratio: 9 / 16; justify-self: center; }
+}
+@media (max-width: 600px) {
+  .service-strip { justify-content: space-between; gap: 8px; font-size: 9px; }
+  .site-header { min-height: 66px; padding: 9px 16px; }
+  .brand-mark { width: 40px; height: 40px; }
+  .wordmark-sub { max-width: 66px; font-size: 8px; }
+  .header-actions { gap: 12px; }
+  .header-button, .text-link { font-size: 11px; }
+  .cart-button { min-height: 40px; padding: 7px 9px; gap: 6px; font-size: 11px; }
+  .menu-intro { min-height: 0; padding: 31px 18px; grid-template-columns: 1fr; grid-template-areas: "copy" "hours" "image"; gap: 16px; }
+  .menu-intro h1 { font-size: 40px; }
+  .intro-note { max-width: 270px; font-size: 12px; }
+  .hours-stamp { min-width: 0; padding: 9px 11px; display: flex; align-items: center; gap: 8px; }
+  .menu-hero-frame { height: clamp(150px, 42vw, 210px); }
+  .menu-hero-frame.portrait-hero-video { width: min(100%, 250px); height: auto; aspect-ratio: 9 / 16; justify-self: center; }
+  .stamp-time { font-size: 15px; }
+  .stamp-foot { display: none; }
+  .menu-section { padding: 34px 16px 45px; }
+  .section-heading { align-items: start; flex-direction: column; gap: 8px; }
+  .section-heading h2 { font-size: 25px; }
+  .minimum-note { font-size: 11px; }
+  .menu-tools { align-items: start; flex-direction: column; gap: 12px; }
+  .search-field { width: 100%; }
+  .menu-grid { grid-template-columns: 1fr; gap: 22px; }
+  .menu-photo { aspect-ratio: 1.55; }
+  .menu-card h3 { font-size: 20px; }
+  .menu-description { min-height: 0; }
+  .track-bar { align-items: stretch; flex-direction: column; gap: 16px; padding: 25px 18px; }
+  .track-bar h2 { font-size: 24px; }
+  .track-form { width: 100%; }
+  .track-form input { width: 0; }
+  .track-form .button { padding-inline: 10px; font-size: 11px; }
+  .site-footer { align-items: start; flex-direction: column; gap: 9px; padding: 22px 18px; }
+  .dialog-content { padding: 20px 16px; }
+  .surface-dialog { width: calc(100vw - 20px); }
+  .drawer-dialog { width: 100vw; }
+  .form-grid { grid-template-columns: 1fr; }
+  .field-wide { grid-column: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  .reveal-card { opacity: 1; transform: none; }
+}
+
+.admin-body { min-height: 100vh; background: var(--cream); }
+.admin-topbar { min-height: 68px; padding: 10px clamp(16px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); background: var(--paper); }
+.admin-topbar .wordmark { text-decoration: none; }
+.admin-top-actions { display: flex; align-items: center; gap: 20px; }
+.admin-store-link { color: var(--forest); font-size: 12px; font-weight: 700; text-underline-offset: 4px; }
+.admin-main { max-width: 1400px; min-height: calc(100vh - 68px); margin: 0 auto; padding: 38px clamp(16px, 4vw, 48px) 72px; }
+.admin-login { width: min(100%, 440px); margin: clamp(40px, 10vh, 110px) auto; padding: 30px; border: 1px solid var(--line); background: var(--white); }
+.admin-file-notice { padding: 12px; border: 1px solid var(--line); background: var(--cream); color: var(--muted); font-size: 12px; line-height: 1.6; }
+.admin-file-notice a { display: inline-block; color: var(--forest); font-weight: 800; text-underline-offset: 3px; }
+.admin-login h1, .admin-heading h1 { margin: 4px 0 0; color: var(--forest); font-family: Georgia, "Times New Roman", serif; font-size: 34px; font-weight: 500; }
+.muted-copy { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.admin-form { margin-top: 24px; display: grid; gap: 16px; }
+.admin-form label, .inline-create-form label, .sales-filter label { min-width: 0; display: grid; gap: 6px; color: #4f473f; font-size: 11px; font-weight: 700; }
+.admin-form input, .inline-create-form input, .sales-filter input, .admin-controls input, .admin-controls select, .record-fields input, .record-fields select, .admin-dialog input:not([type=checkbox]), .admin-dialog select, .admin-dialog textarea { min-width: 0; width: 100%; min-height: 40px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 3px; background: var(--white); color: var(--ink); font: inherit; font-size: 13px; }
+.admin-form .button { margin-top: 4px; }
+.admin-heading { margin-bottom: 24px; display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+.admin-welcome { color: var(--muted); font-size: 12px; }
+.store-control { margin: 0 0 4px; padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border: 1px solid var(--line); background: var(--white); }
+.store-control-copy { min-width: 0; display: flex; align-items: center; gap: 14px; }
+.store-status-indicator { width: 12px; height: 12px; flex: 0 0 auto; border-radius: 50%; background: var(--muted); box-shadow: 0 0 0 4px var(--cream); }
+.store-control.is-open .store-status-indicator { background: #287b55; }
+.store-control.is-closed .store-status-indicator { background: var(--paprika); }
+.store-control h2 { margin: 2px 0 0; color: var(--forest); font-size: 16px; font-weight: 700; }
+.store-control .eyebrow, .store-control .muted-copy { margin: 0; }
+.store-control .muted-copy { margin-top: 3px; font-size: 11px; }
+.store-control > .button { flex: 0 0 auto; }
+.admin-tabs { margin-bottom: 26px; display: flex; overflow-x: auto; border-bottom: 1px solid var(--line); }
+.admin-tabs button { min-height: 44px; padding: 0 18px; flex: 0 0 auto; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); font: inherit; font-size: 12px; font-weight: 700; }
+.admin-tabs button[aria-current="page"] { border-bottom-color: var(--tomato); color: var(--forest); }
+.admin-view { animation: admin-in .16s ease-out; }
+@keyframes admin-in { from { opacity: .6; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+.admin-section-heading { margin: 20px 0 16px; display: flex; align-items: end; justify-content: space-between; gap: 18px; }
+.admin-section-heading h2 { margin: 3px 0 0; color: var(--forest); font-family: Georgia, "Times New Roman", serif; font-size: 26px; font-weight: 500; }
+.admin-section-heading .eyebrow { margin: 0; }
+.admin-controls { display: flex; align-items: center; gap: 8px; }
+.admin-controls input, .admin-controls select { width: auto; min-width: 150px; }
+.button-outline { border: 1px solid var(--line); background: var(--white); color: var(--forest); }
+.button-outline:hover { border-color: var(--forest); background: var(--sage); }
+.count-strip { margin: 17px 0; display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.count-item { min-width: 120px; padding: 12px 18px 12px 0; margin-right: 18px; display: grid; gap: 2px; }
+.count-item strong { color: var(--forest); font-size: 18px; }
+.count-item span { color: var(--muted); font-size: 10px; }
+.table-wrap { width: 100%; overflow-x: auto; border-top: 1px solid var(--line); }
+.admin-table { width: 100%; border-collapse: collapse; text-align: left; }
+.admin-table th { padding: 11px 12px; color: var(--muted); font-size: 10px; font-weight: 800; text-transform: uppercase; white-space: nowrap; }
+.admin-table td { padding: 13px 12px; border-top: 1px solid var(--line); color: var(--ink); font-size: 12px; vertical-align: middle; }
+.admin-table td:first-child { color: var(--forest); font-weight: 800; white-space: nowrap; }
+.admin-table select { min-height: 34px; padding: 5px 7px; border: 1px solid var(--line); border-radius: 3px; background: var(--white); font: inherit; font-size: 11px; }
+.row-actions { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.small-button { min-height: 32px; padding: 6px 9px; border: 1px solid var(--line); border-radius: 3px; background: var(--white); color: var(--forest); font: inherit; font-size: 11px; font-weight: 700; }
+.small-button:hover { border-color: var(--forest); }
+.small-button.danger { color: var(--paprika); }
+.status-label { color: var(--forest); font-size: 11px; font-weight: 800; }
+.status-label.out-of-stock-label { color: var(--paprika); }
+.admin-record-list { margin-top: 18px; border-top: 1px solid var(--line); }
+.record-row { padding: 15px 0; display: grid; grid-template-columns: minmax(150px, 1fr) minmax(130px, 1fr) minmax(220px, 1.6fr) auto; align-items: center; gap: 14px; border-bottom: 1px solid var(--line); }
+.record-title { min-width: 0; }
+.record-title strong { display: block; overflow-wrap: anywhere; color: var(--forest); font-family: Georgia, "Times New Roman", serif; font-size: 17px; font-weight: 600; }
+.record-title span { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; }
+.record-fields { min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(80px, 1fr)); gap: 7px; }
+.record-fields.single { grid-template-columns: minmax(120px, 240px); }
+.record-actions { display: flex; justify-content: end; gap: 7px; }
+.inline-create-form { margin: 22px 0 24px; padding: 16px; display: grid; grid-template-columns: 1.1fr 1.5fr .55fr auto; align-items: end; gap: 12px; background: var(--white); border: 1px solid var(--line); }
+.inline-create-form input { font-weight: 400; }
+.sales-filter { margin: 20px 0; display: flex; align-items: end; gap: 12px; }
+.sales-filter label { width: min(220px, 40%); }
+.sales-totals { margin: 25px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 240px)); gap: 40px; }
+.sales-total { padding-bottom: 14px; border-bottom: 2px solid var(--forest); }
+.sales-total span { display: block; color: var(--muted); font-size: 11px; }
+.sales-total strong { display: block; margin-top: 6px; color: var(--forest); font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 500; }
+.sales-disclaimer { color: var(--muted); font-size: 11px; }
+.empty-state { padding: 30px 14px; color: var(--muted); font-size: 13px; text-align: center; }
+.sr-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.admin-dialog { width: min(620px, calc(100vw - 24px)); }
+.admin-dialog .dialog-content { max-height: min(90dvh, 850px); overflow-y: auto; }
+.admin-dialog .dialog-actions { justify-content: end; }
+.admin-dialog .dialog-actions .button { min-width: 130px; }
+.check-label { display: flex !important; align-items: center; gap: 9px !important; }
+.check-label input { width: 17px; height: 17px; accent-color: var(--forest); }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.detail-cell { padding: 11px 0; border-bottom: 1px solid var(--line); }
+.detail-cell span { display: block; margin-bottom: 4px; color: var(--muted); font-size: 10px; }
+.detail-cell strong { font-size: 12px; font-weight: 600; overflow-wrap: anywhere; }
+.detail-line { padding: 10px 0; display: flex; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.error-text { color: var(--paprika); }
+
+@media (max-width: 780px) {
+  .admin-main { padding-top: 26px; }
+  .admin-section-heading { align-items: start; flex-direction: column; }
+  .admin-controls { width: 100%; flex-wrap: wrap; }
+  .admin-controls input { flex: 1; }
+  .record-row { grid-template-columns: minmax(130px, 1fr) minmax(150px, 1fr); }
+  .record-fields { grid-column: 1 / -1; grid-row: 2; }
+  .record-actions { grid-column: 2; grid-row: 1; }
+  .inline-create-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .inline-create-form .button { width: 100%; }
+  .sales-filter { flex-wrap: wrap; }
+}
+@media (max-width: 520px) {
+  .admin-login { padding: 22px 18px; }
+  .admin-heading { align-items: start; flex-direction: column; }
+  .store-control { align-items: stretch; flex-direction: column; padding: 14px; }
+  .store-control > .button { width: 100%; }
+  .admin-tabs button { padding-inline: 12px; font-size: 11px; }
+  .admin-controls select { flex: 1; min-width: 120px; }
+  .record-row { grid-template-columns: 1fr auto; gap: 10px; }
+  .record-title { grid-column: 1; }
+  .record-actions { grid-column: 2; grid-row: 1; }
+  .record-fields { grid-column: 1 / -1; grid-row: 2; }
+  .inline-create-form { grid-template-columns: 1fr; padding: 12px; }
+  .sales-filter label { width: calc(50% - 6px); }
+  .sales-filter .button { width: 100%; }
+  .sales-totals { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .sales-total strong { font-size: 21px; }
+  .detail-grid { grid-template-columns: 1fr; gap: 0; }
+}
+
+</style>
+  
+  <script type="module" nonce="__CSP_NONCE__">window.ONO_CONFIG = { apiBaseUrl: "/api/v1" }; if (location.protocol === "file:") { document.addEventListener("DOMContentLoaded", () => { document.getElementById("admin-file-notice").hidden = false; document.getElementById("admin-login-form").hidden = true; }); }
+const baseUrl = (window.ONO_CONFIG?.apiBaseUrl || "/api/v1").replace(/\/$/, "");
+let csrfToken = "";
+
+async function readCsrf(refresh = false) {
+  if (csrfToken && !refresh) return csrfToken;
+  const response = await fetch(baseUrl + "/security/csrf", { credentials: "include" });
+  const body = await response.json();
+  if (!response.ok) throw new Error(body.error?.message || "Unable to start a secure session.");
+  csrfToken = body.csrf_token;
+  return csrfToken;
+}
+
+async function request(path, options = {}, retried = false) {
+  const method = (options.method || "GET").toUpperCase();
+  const headers = new Headers(options.headers || {});
+  if (options.body !== undefined && !(options.body instanceof FormData)) headers.set("Content-Type", "application/json");
+  if (!(["GET", "HEAD", "OPTIONS"].includes(method))) headers.set("X-CSRF-Token", await readCsrf());
+  const response = await fetch(baseUrl + path, {
+    ...options, method, headers, credentials: "include",
+    body: options.body instanceof FormData ? options.body : options.body === undefined ? undefined : JSON.stringify(options.body)
+  });
+  const body = response.status === 204 ? {} : await response.json().catch(() => ({}));
+  if (!response.ok) {
+    if (response.status === 403 && body.error?.code === "CSRF_VALIDATION_FAILED" && !retried) {
+      await readCsrf(true);
+      return request(path, options, true);
+    }
+    const error = new Error(body.error?.message || "The request could not be completed.");
+    error.status = response.status;
+    error.code = body.error?.code;
+    error.fields = body.error?.field_errors || {};
+    throw error;
+  }
+  return body;
+}
+
+const api = {
+  get: (path) => request(path),
+  post: (path, body, headers) => request(path, { method: "POST", body, headers }),
+  patch: (path, body) => request(path, { method: "PATCH", body }),
+  delete: (path) => request(path, { method: "DELETE" })
+};
+
+
+const $ = (selector, root = document) => root.querySelector(selector);
+const state = { user: null, orders: [], categories: [], items: [], zones: [], sales: null, acceptingOrders: null, toastTimer: 0 };
+const transitions = { Pending: ["Preparing", "Cancelled"], Preparing: ["Out for Delivery"], "Out for Delivery": ["Delivered"], Delivered: [], Cancelled: [] };
+
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
+}
+
+function money(value) {
+  return "PKR " + Number(value || 0).toLocaleString("en-PK", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+}
+
+function feedback(selector, text, type = "") {
+  const element = $(selector);
+  element.textContent = text || "";
+  element.classList.toggle("error", type === "error");
+  element.classList.toggle("success", type === "success");
+}
+
+function notify(text) {
+  const element = $("#toast");
+  element.textContent = text;
+  element.classList.add("visible");
+  clearTimeout(state.toastTimer);
+  state.toastTimer = setTimeout(() => element.classList.remove("visible"), 2600);
+}
+
+function todayLocal() {
+  const now = new Date();
+  return new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+}
+
+function renderStoreStatus() {
+  const panel = $(".store-control");
+  const title = $("#store-status-title");
+  const description = $("#store-status-description");
+  const button = $("#store-status-toggle");
+  panel.classList.toggle("is-open", state.acceptingOrders === true);
+  panel.classList.toggle("is-closed", state.acceptingOrders === false);
+  if (state.acceptingOrders === null) {
+    title.textContent = "Store status unavailable";
+    description.textContent = "The backend must provide the store-status setting before this control can be used.";
+    button.textContent = "Status unavailable";
+    button.disabled = true;
+    return;
+  }
+  title.textContent = state.acceptingOrders ? "Accepting orders" : "Orders paused";
+  description.textContent = state.acceptingOrders
+    ? "Customers can place orders during the regular opening hours."
+    : "Customers can browse the menu, but cannot place new orders.";
+  button.textContent = state.acceptingOrders ? "Close store" : "Open store";
+  button.setAttribute("aria-label", state.acceptingOrders ? "Stop accepting new orders" : "Resume accepting orders");
+  button.disabled = false;
+}
+
+async function loadStoreStatus() {
+  try {
+    const result = await api.get("/admin/store-status");
+    if (typeof result.accepting_orders !== "boolean") throw new Error("The store-status response is missing accepting_orders.");
+    state.acceptingOrders = result.accepting_orders;
+    feedback("#store-status-message", "");
+  } catch (error) {
+    state.acceptingOrders = null;
+    feedback("#store-status-message", error.message.includes("missing accepting_orders")
+      ? error.message
+      : "Store controls need GET/PATCH /admin/store-status in the backend.", "error");
+  }
+  renderStoreStatus();
+}
+
+async function toggleStoreStatus() {
+  if (state.acceptingOrders === null) return;
+  const next = !state.acceptingOrders;
+  if (!next && !confirm("Close ordering for customers? Existing orders will not be changed.")) return;
+  const button = $("#store-status-toggle");
+  button.disabled = true;
+  try {
+    const result = await api.patch("/admin/store-status", { accepting_orders: next });
+    if (typeof result.accepting_orders !== "boolean") throw new Error("The store-status response is missing accepting_orders.");
+    state.acceptingOrders = result.accepting_orders;
+    renderStoreStatus();
+    notify(state.acceptingOrders ? "Store is accepting orders" : "Store is closed to new orders");
+  } catch (error) {
+    button.disabled = false;
+    feedback("#store-status-message", error.message, "error");
+  }
+}
+
+function setView(name) {
+  document.querySelectorAll(".admin-view").forEach((section) => { section.hidden = section.id !== "view-" + name; });
+  document.querySelectorAll(".admin-tabs button").forEach((button) => {
+    if (button.dataset.view === name) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
+  });
+  const actions = { orders: loadOrders, menu: loadMenu, categories: loadCategories, zones: loadZones, sales: loadSales };
+  actions[name]?.().catch((error) => feedback("#" + name + "-message", error.message, "error"));
+}
+
+function renderCounts(counts) {
+  const order = ["Pending", "Preparing", "Out for Delivery", "Delivered", "Cancelled"];
+  $("#order-counts").innerHTML = order.map((status) => `<div class="count-item"><strong>${esc(counts[status] || 0)}</strong><span>${esc(status)}</span></div>`).join("");
+}
+
+function renderOrders() {
+  const target = $("#orders-table");
+  if (!state.orders.length) { target.innerHTML = '<div class="empty-state">No orders in this view.</div>'; return; }
+  target.innerHTML = `<table class="admin-table"><thead><tr><th>Order</th><th>Received</th><th>Customer</th><th>Zone</th><th>Total</th><th>Status</th><th>Update</th><th>Details</th></tr></thead><tbody>${state.orders.map((order) => {
+    const options = transitions[order.order_status] || [];
+    const statusControl = options.length ? `<div class="row-actions"><select data-next-status="${esc(order.order_id)}" aria-label="Next status for order ${esc(order.order_id)}"><option value="">Next status</option>${options.map((option) => `<option value="${esc(option)}">${esc(option)}</option>`).join("")}</select><button class="small-button" type="button" data-apply-status="${esc(order.order_id)}">Apply</button></div>` : '<span class="status-label">Final</span>';
+    return `<tr><td>#${esc(order.order_id)}</td><td>${esc(new Date(order.order_timestamp).toLocaleString())}</td><td>${esc(order.customer_name)}<br><span>${esc(order.customer_phone)}</span></td><td>${esc(order.zone_name || "-")}</td><td>${esc(money(order.total_amount))}</td><td>${esc(order.order_status)}</td><td>${statusControl}</td><td><button class="small-button" type="button" data-order-detail="${esc(order.order_id)}">Details</button></td></tr>`;
+  }).join("")}</tbody></table>`;
+}
+
+async function loadOrders() {
+  const status = $("#order-status-filter").value;
+  const [summary, result] = await Promise.all([api.get("/admin/summary"), api.get("/admin/orders?limit=100" + (status ? "&status=" + encodeURIComponent(status) : ""))]);
+  renderCounts(summary.counts);
+  state.orders = result.orders;
+  renderOrders();
+  feedback("#orders-message", "");
+}
+
+function optionsText(options = [], includeRequired = false) {
+  return options.map((option) => `${option.name} | ${option.price}${includeRequired && option.required ? " | required" : ""}`).join("\n");
+}
+
+function parseOptions(value, label, requiredFlag = false) {
+  const rows = value.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+  return rows.map((line, index) => {
+    const [rawName, rawPrice, rawRequired] = line.split("|").map((part) => part.trim());
+    const price = Number(rawPrice);
+    if (!rawName || !Number.isFinite(price) || price < 0) throw new Error(`Check the ${label} options. Each line needs a name and non-negative price.`);
+    const idBase = rawName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || label;
+    return { id: idBase.slice(0, 65) + "-" + (index + 1), name: rawName, price: price.toFixed(2), ...(requiredFlag ? { required: rawRequired?.toLowerCase() === "required" } : {}) };
+  });
+}
+
+function fillCategorySelect(selected = "") {
+  const active = state.categories.filter((category) => category.is_active);
+  $("#menu-item-form [name=category_id]").innerHTML = active.map((category) => `<option value="${esc(category.category_id)}">${esc(category.category_name)}</option>`).join("");
+  if (selected) $("#menu-item-form [name=category_id]").value = selected;
+}
+
+function renderMenu() {
+  const query = $("#menu-admin-search").value.trim().toLowerCase();
+  const items = state.items.filter((item) => !item.is_archived && (item.item_name + " " + (item.category_name || "")).toLowerCase().includes(query));
+  $("#menu-admin-list").innerHTML = items.length ? items.map((item) => `<article class="record-row"><div class="record-title"><strong>${esc(item.item_name)}</strong><span>${esc(item.category_name)} / ${esc(money(item.base_price))}</span></div><div class="record-fields single"><span class="status-label ${item.availability_status ? "" : "out-of-stock-label"}">${item.availability_status ? "In stock" : "Out of stock"}</span></div><div class="record-fields"><span>${item.sizes?.length ? `${item.sizes.length} size options` : "No sizes"}</span><span>${item.addons_config?.length ? `${item.addons_config.length} add-ons` : "No add-ons"}</span></div><div class="record-actions"><button class="small-button" type="button" data-edit-item="${esc(item.item_id)}">Edit</button><button class="small-button" type="button" data-availability="${esc(item.item_id)}" data-value="${!item.availability_status}">${item.availability_status ? "Mark out of stock" : "Mark in stock"}</button><button class="small-button danger" type="button" data-archive-item="${esc(item.item_id)}">Archive</button></div></article>`).join("") : '<div class="empty-state">No menu items have been added.</div>';
+}
+
+async function loadMenu() {
+  const result = await api.get("/admin/menu-items?include_archived=true");
+  state.items = result.items;
+  renderMenu();
+  feedback("#menu-admin-message", "");
+}
+
+function renderCategories() {
+  $("#category-admin-list").innerHTML = state.categories.length ? state.categories.map((category) => `<article class="record-row" data-category-row="${esc(category.category_id)}"><div class="record-title"><strong>${esc(category.category_name)}</strong><span>Display order ${esc(category.display_order)}</span></div><div class="record-fields"><input aria-label="Category name" name="category_name" value="${esc(category.category_name)}" maxlength="80"><input aria-label="Display order" name="display_order" type="number" value="${esc(category.display_order)}"></div><div class="record-fields single"><input aria-label="Category description" name="description" value="${esc(category.description || "")}" maxlength="1000"></div><div class="record-actions"><button class="small-button" type="button" data-save-category="${esc(category.category_id)}">Save</button><button class="small-button ${category.is_active ? "danger" : ""}" type="button" data-toggle-category="${esc(category.category_id)}" data-value="${!category.is_active}">${category.is_active ? "Deactivate" : "Activate"}</button></div></article>`).join("") : '<div class="empty-state">No categories yet.</div>';
+  fillCategorySelect();
+}
+
+async function loadCategories() {
+  const result = await api.get("/admin/categories");
+  state.categories = result.categories;
+  renderCategories();
+  feedback("#category-message", "");
+}
+
+function renderZones() {
+  $("#zone-admin-list").innerHTML = state.zones.length ? state.zones.map((zone) => `<article class="record-row" data-zone-row="${esc(zone.zone_id)}"><div class="record-title"><strong>${esc(zone.zone_name)}</strong><span>${zone.is_active ? "Active" : "Inactive"}</span></div><div class="record-fields"><input aria-label="Zone name" name="zone_name" value="${esc(zone.zone_name)}" maxlength="100"><input aria-label="Delivery fee" name="delivery_fee" type="number" min="0" step="0.01" value="${esc(zone.delivery_fee)}"></div><div class="record-fields single"><input aria-label="Coverage notes" name="coverage_notes" value="${esc(zone.coverage_notes || "")}" maxlength="1000"></div><div class="record-actions"><button class="small-button" type="button" data-save-zone="${esc(zone.zone_id)}">Save</button><button class="small-button ${zone.is_active ? "danger" : ""}" type="button" data-toggle-zone="${esc(zone.zone_id)}" data-value="${!zone.is_active}">${zone.is_active ? "Deactivate" : "Activate"}</button></div></article>`).join("") : '<div class="empty-state">No delivery zones yet.</div>';
+}
+
+async function loadZones() {
+  const result = await api.get("/admin/delivery-zones");
+  state.zones = result.zones;
+  renderZones();
+  feedback("#zone-message", "");
+}
+
+async function loadSales(event) {
+  if (event) event.preventDefault();
+  const form = $("#sales-form");
+  const from = form.elements.from.value;
+  const to = form.elements.to.value;
+  const result = await api.get(`/admin/sales?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`);
+  state.sales = result;
+  $("#sales-totals").innerHTML = `<div class="sales-total"><span>Delivered orders</span><strong>${esc(result.totals.delivered_orders)}</strong></div><div class="sales-total"><span>Delivered order value</span><strong>${esc(money(result.totals.delivered_order_value))}</strong></div>`;
+  $("#sales-table").innerHTML = result.days.length ? `<table class="admin-table"><thead><tr><th>Date</th><th>Delivered orders</th><th>Delivered order value</th></tr></thead><tbody>${result.days.map((day) => `<tr><td>${esc(day.sales_date)}</td><td>${esc(day.orders)}</td><td>${esc(money(day.delivered_order_value))}</td></tr>`).join("")}</tbody></table>` : '<div class="empty-state">No delivered orders in this date range.</div>';
+  feedback("#sales-message", "");
+}
+
+function resetMenuForm(item = null) {
+  const form = $("#menu-item-form");
+  form.reset();
+  form.elements.item_id.value = item?.item_id || "";
+  form.elements.item_name.value = item?.item_name || "";
+  form.elements.category_id.value = item?.category_id || state.categories.find((entry) => entry.is_active)?.category_id || "";
+  form.elements.base_price.value = item?.base_price || "";
+  form.elements.image_url.value = item?.image_url || "";
+  form.elements.description.value = item?.description || "";
+  form.elements.sizes_text.value = optionsText(item?.sizes || []);
+  form.elements.addons_text.value = optionsText(item?.addons_config || [], true);
+  form.elements.availability_status.checked = item?.availability_status ?? true;
+  $("#menu-dialog-title").textContent = item ? "Edit menu item" : "Add menu item";
+  feedback("#menu-item-form-message", "");
+  $("#menu-item-dialog").showModal();
+}
+
+async function saveMenuItem(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const body = {
+    item_name: form.elements.item_name.value.trim(), category_id: form.elements.category_id.value,
+    base_price: form.elements.base_price.value, image_url: form.elements.image_url.value.trim() || null,
+    description: form.elements.description.value.trim(), availability_status: form.elements.availability_status.checked,
+    sizes: parseOptions(form.elements.sizes_text.value, "size"),
+    addons_config: parseOptions(form.elements.addons_text.value, "add-on", true)
+  };
+  try {
+    const id = form.elements.item_id.value;
+    if (id) await api.patch("/admin/menu-items/" + id, body);
+    else await api.post("/admin/menu-items", body);
+    $("#menu-item-dialog").close();
+    await loadMenu();
+    notify(id ? "Menu item updated" : "Menu item added");
+  } catch (error) { feedback("#menu-item-form-message", error.message, "error"); }
+}
+
+async function showOrder(id) {
+  const { order } = await api.get("/admin/orders/" + id);
+  const details = [
+    ["Customer", order.customer_name], ["Phone", order.customer_phone], ["Received", new Date(order.order_timestamp).toLocaleString()],
+    ["Status", order.order_status], ["Payment", order.payment_type], ["Delivery zone", order.zone_name],
+    ["Address", order.delivery_address], ["Delivery notes", order.delivery_instructions || "-"],
+    ["Food subtotal", money(order.subtotal_amount)], ["Delivery fee", money(order.fee_snapshot)], ["Total", money(order.total_amount)]
+  ];
+  $("#order-detail-title").textContent = "Order #" + order.order_id;
+  $("#order-detail-content").innerHTML = `<div class="detail-grid">${details.map(([label, value]) => `<div class="detail-cell"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join("")}</div><h3 class="account-orders">Items</h3>${order.items.map((item) => `<div class="detail-line"><span>${esc(item.quantity)} x ${esc(item.item_name_snapshot)}${item.size_option ? ` / ${esc(item.size_option)}` : ""}${item.selected_addons?.length ? ` / ${esc(item.selected_addons.map((addon) => addon.name).join(", "))}` : ""}</span><strong>${esc(money(item.subtotal))}</strong></div>`).join("")}<h3 class="account-orders">Status history</h3><ol class="status-history">${order.status_history.map((entry) => `<li>${esc(entry.new_status)}${entry.note ? ` / ${esc(entry.note)}` : ""}<time>${esc(new Date(entry.changed_at).toLocaleString())}</time></li>`).join("")}</ol>`;
+  $("#order-detail-dialog").showModal();
+}
+
+async function init() {
+  $("#sales-form").elements.to.value = todayLocal();
+  const from = new Date(Date.now() - 29 * 86400000);
+  $("#sales-form").elements.from.value = new Date(from.getTime() - from.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  $("#admin-login-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const values = Object.fromEntries(new FormData(event.currentTarget));
+    try {
+      const result = await api.post("/auth/login", values);
+      if (result.user.role !== "admin") {
+        await api.post("/auth/logout", {});
+        throw new Error("This account does not have owner access.");
+      }
+      state.user = result.user;
+      $("#admin-login").hidden = true;
+      $("#admin-dashboard").hidden = false;
+      $("#admin-sign-out").hidden = false;
+      $("#admin-welcome").textContent = result.user.full_name;
+      loadStoreStatus();
+      setView("orders");
+    } catch (error) { feedback("#login-message", error.message, "error"); }
+  });
+  $("#admin-sign-out").addEventListener("click", async () => {
+    try { await api.post("/auth/logout", {}); location.reload(); }
+    catch (error) { feedback("#orders-message", error.message, "error"); }
+  });
+  $("#store-status-toggle").addEventListener("click", toggleStoreStatus);
+  document.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", () => setView(button.dataset.view)));
+  document.querySelectorAll("[data-refresh]").forEach((button) => button.addEventListener("click", () => setView(button.dataset.refresh)));
+  $("#order-status-filter").addEventListener("change", () => loadOrders().catch((error) => feedback("#orders-message", error.message, "error")));
+  $("#orders-table").addEventListener("click", async (event) => {
+    const detail = event.target.closest("[data-order-detail]");
+    if (detail) { try { await showOrder(detail.dataset.orderDetail); } catch (error) { feedback("#orders-message", error.message, "error"); } return; }
+    const apply = event.target.closest("[data-apply-status]");
+    if (apply) {
+      const select = $(`[data-next-status="${CSS.escape(apply.dataset.applyStatus)}"]`, $("#orders-table"));
+      if (!select.value) return;
+      apply.disabled = true;
+      try { await api.patch(`/admin/orders/${apply.dataset.applyStatus}/status`, { order_status: select.value }); await loadOrders(); notify("Order status updated"); }
+      catch (error) { feedback("#orders-message", error.message, "error"); apply.disabled = false; }
+    }
+  });
+  $("#menu-admin-search").addEventListener("input", renderMenu);
+  $("#new-menu-item").addEventListener("click", async () => { try { await loadCategories(); resetMenuForm(); } catch (error) { feedback("#menu-admin-message", error.message, "error"); } });
+  $("#menu-item-form").addEventListener("submit", saveMenuItem);
+  $("#menu-admin-list").addEventListener("click", async (event) => {
+    const edit = event.target.closest("[data-edit-item]");
+    const availability = event.target.closest("[data-availability]");
+    const archive = event.target.closest("[data-archive-item]");
+    try {
+      if (edit) { await loadCategories(); resetMenuForm(state.items.find((item) => String(item.item_id) === edit.dataset.editItem)); }
+      if (availability) { await api.patch(`/admin/menu-items/${availability.dataset.availability}/availability`, { availability_status: availability.dataset.value === "true" }); await loadMenu(); }
+      if (archive && confirm("Archive this menu item? Past order records will remain unchanged.")) { await api.delete("/admin/menu-items/" + archive.dataset.archiveItem); await loadMenu(); }
+    } catch (error) { feedback("#menu-admin-message", error.message, "error"); }
+  });
+  $("#new-category-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const values = Object.fromEntries(new FormData(event.currentTarget));
+    values.display_order = Number(values.display_order);
+    try { await api.post("/admin/categories", values); event.currentTarget.reset(); await loadCategories(); notify("Category added"); }
+    catch (error) { feedback("#category-message", error.message, "error"); }
+  });
+  $("#category-admin-list").addEventListener("click", async (event) => {
+    const save = event.target.closest("[data-save-category]");
+    const toggle = event.target.closest("[data-toggle-category]");
+    const row = event.target.closest("[data-category-row]");
+    if (!row) return;
+    try {
+      if (save) {
+        await api.patch("/admin/categories/" + save.dataset.saveCategory, { category_name: row.querySelector("[name=category_name]").value, description: row.querySelector("[name=description]").value, display_order: Number(row.querySelector("[name=display_order]").value) });
+        await loadCategories(); notify("Category saved");
+      }
+      if (toggle) {
+        const active = toggle.dataset.value === "true";
+        if (!active && !confirm("Deactivate this category? Its items will no longer appear to customers.")) return;
+        if (active) await api.patch("/admin/categories/" + toggle.dataset.toggleCategory, { is_active: true });
+        else await api.delete("/admin/categories/" + toggle.dataset.toggleCategory);
+        await loadCategories();
+      }
+    } catch (error) { feedback("#category-message", error.message, "error"); }
+  });
+  $("#new-zone-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    try { await api.post("/admin/delivery-zones", Object.fromEntries(new FormData(event.currentTarget))); event.currentTarget.reset(); await loadZones(); notify("Delivery zone added"); }
+    catch (error) { feedback("#zone-message", error.message, "error"); }
+  });
+  $("#zone-admin-list").addEventListener("click", async (event) => {
+    const save = event.target.closest("[data-save-zone]");
+    const toggle = event.target.closest("[data-toggle-zone]");
+    const row = event.target.closest("[data-zone-row]");
+    if (!row) return;
+    try {
+      if (save) {
+        await api.patch("/admin/delivery-zones/" + save.dataset.saveZone, { zone_name: row.querySelector("[name=zone_name]").value, delivery_fee: row.querySelector("[name=delivery_fee]").value, coverage_notes: row.querySelector("[name=coverage_notes]").value });
+        await loadZones(); notify("Delivery zone saved");
+      }
+      if (toggle) {
+        const active = toggle.dataset.value === "true";
+        if (!active && !confirm("Deactivate this delivery zone? Customers will no longer be able to select it.")) return;
+        if (active) await api.patch("/admin/delivery-zones/" + toggle.dataset.toggleZone, { is_active: true });
+        else await api.delete("/admin/delivery-zones/" + toggle.dataset.toggleZone);
+        await loadZones();
+      }
+    } catch (error) { feedback("#zone-message", error.message, "error"); }
+  });
+  $("#sales-form").addEventListener("submit", (event) => loadSales(event).catch((error) => feedback("#sales-message", error.message, "error")));
+  document.querySelectorAll("[data-close]").forEach((button) => button.addEventListener("click", () => document.getElementById(button.dataset.close).close()));
+  for (const dialog of document.querySelectorAll("dialog")) dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+}
+
+init();
+</script>
+  
+</head>
+<body class="admin-body">
+  <header class="admin-topbar">
+    <a class="wordmark" href="./index.html" aria-label="ONO Food storefront"><img class="brand-mark" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/7QCEUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAGgcAigAYkZCTUQwYTAwMGE4NzAxMDAwMDMyMDIwMDAwYjQwMjAwMDBlYTAyMDAwMDY3MDMwMDAwZjgwMzAwMDAyMjA1MDAwMDU1MDUwMDAwYTYwNTAwMDAxYzA2MDAwMDk3MDcwMDAwAP/bAIQABQYGCwgLCwsLCw0LCwsNDg4NDQ4ODw0ODg4NDxAQEBEREBAQEA8TEhMPEBETFBQTERMWFhYTFhUVFhkWGRYWEgEFBQUKBwoICQkICwgKCAsKCgkJCgoMCQoJCgkMDQsKCwsKCw0MCwsICwsMDAwNDQwMDQoLCg0MDQ0MExQTExOc/8IAEQgAZABkAwEiAAIRAQMRAf/EAFIAAQACAwEBAAAAAAAAAAAAAAABBgMEBQIHEAABAQUFBQYEBAcAAAAAAAABEQACITFBAyBRYXEQEjCBsQSRocHh8AUTItFAQlLxFBUyM1Bikv/aAAwDAQACAAMAAAABtMTFN7AQAAAAVe0VctMTEgg2ti1dLWrmpZ+bu4a41tnh7weJVe0VctMTEghbtbY41j53z710uty9v1JoZgFXtFXLTExIIbnxr6zodPX+T5bx1N7D1hXt4BV7RVy0xOKWTVy+5jjx1ZzedbX38/ieVO3l9Rka+XD791e0VeFpiYkEAAAAFXtFXLTFXStCroWhVxaFXFoVcWhVxaKuH//aAAgBAQABBQL8e5ZF5v4Qs/YPO8Kwst8t8x1rTtQdZy0NpwezhHO0vo3xDtBcbs6244PZyrvxG0ds3XezbzDhWdt8tu19oftnxavBrB951/hWvZ3LVv5ZZtZdks7Lg2pIG/aIX7RLXeZ55/edef3rB543SrR2RYK0dn1NFfqT/E//2gAIAQMAAT8B4Ntb7sBNh2h/XkwK3R/c+rEsHCSpMKC9a2G9EQLO9neURRL27mWTMsBr+B//2gAIAQIAAT8BN87Ox9g+aN54o7RJn0Z74fYkFCiTO8qas+7ukiabTseBPZwLOZddlyVnrd1xwOOO/UP6n8dPdFuHZ2L4h8n6XhvO0SY9GtPiVluvI6Xt6iIut0QQzyb5g/S778GD6fldM/fujPPhDB39vuvhFkz2G+b/AP/aAAgBAQAGPwL8fBpjh5DZMN4D/Y5eZYmlPTLrwQyYsHR+aZZTB2R0/S7/AK448IZMHjOQGLLagPPHuGQZBThGC5MS/PD9OTJvFNWdLs17+H9Q51ab3gygRxMeDCfewQL9RmEV1PBhNd0flm9gcGG7j4N/zSBH5o0b/qkEpGqt9WAmN2NRePhsPhdybP8AxX//2gAIAQEAAT8hMzxTPimd2RoYmAb2haIIoxEfW8Z3Igc7M4MAkAxEUjasrlCQDISCqUkDQGM2VEBRiEAcUYJAnEZJdM7mqI97HEBCrRg8OgnIVEHmySAoYAIGAqVHMoXjO53KMVCbEmaDzNGEukeYaeaasAAgAQIKcrxncMpBSSBJEpwyaF2EBSGAdTVgSB4ASdWIAVAOYyOK3jO7IEnk7wY4Vkv2MY5sK5UHK8Z7SU4VFAKFIFSApRioalICIUVEyksMWhEKGQKVngU01gjGmuUmUEHEECKUYBAVFQIyJjWFBDmrFIIKKoQgE4rVDojVMixMFSYjO4ZtKTGOjTSImoFhRWIlFkhUmV0o0oxWOmxEGMV8KslSSTSJYmAKmMIJsM+KZ8Uz4v8A/9oADAMBAAIAAwAAABCgMMMMMOgMdskMOgM+KMMOgPAeMMOpebokYOgMMMMMOAMMMMMP/9oACAEDAAE/EBfGxWktRMh6sAQoikIF0T1ZICiLT3+x2jYYBGQLLjFPFGmvNUe/O4Ni1TEWR9WiQMRVTS5RjFRETjsEdCTSI/uYHLYL4v8A/9oACAECAAE/EJjfmOyIakoZlTJUJKWiL5TuAwTuaOsQhZLymDkYgwO2Y7I+gMSFD4qKvNu5qT5lE5FyY7EC6oqZosD3EZOGANErHh33EU4atFgIINQNUOVC3s+f2MhA6lP33mQHu5GApWAzlVPfdsmN+Y3/AP/aAAgBAQABPxDxh68WdqevFnanrdjftRGvJWCMVtC8fRg5JPOS1H2Xp2p63F72gHmLBEAAAgAIABllFgSyJITRJ2yP7WYQG1Xc2FzikRdJ2p63AYlZ6l9kY96lqE0U5ktrY0E6EtU0lsSiMGwoAAAAQCAAgABQXZ2p63BB1UfI/ZGG+qoDH3A5AROcAQIvJ0ObYWAAAJIIkESvTtT1uJcRDKgApDAU1eTKr11GJHqY6ZNWvuMhsFhggcgY3Z2p63RUNQAQtI3IqGIKgLMeMbCCoZJH2JBenanrtAaSqVQiwmSojkQSrML5yN1ABgxaoYzTnUYDAkxcRqsKIiwPFDOoAxyAhIJfQcn8JkzCZXmJCKqCCYSTJTTbO1PVhLy2KDjmjIcQDkcwYV5ojCQAiKBTiatIQKAopA6fdgncElOgaFGIKmFURil4MGpSGiJVkHurTCIGZY5aV5MBMxYjIgUCCssmUZUUCEMaL4nZO1PXiztT14s7U9eL/9k=" alt="" width="100" height="100"><span class="wordmark-sub">OWNER<br>WORKSPACE</span></a>
+    <div class="admin-top-actions"><a href="/" class="admin-store-link">View storefront</a><button id="admin-sign-out" class="text-button" type="button" hidden>Sign out</button></div>
+  </header>
+
+  <main class="admin-main">
+    <section id="admin-login" class="admin-login" aria-labelledby="login-title">
+      <p class="eyebrow">ONO FOOD / KARACHI</p>
+      <h1 id="login-title">Owner sign in</h1>
+      <p class="muted-copy">Use your admin account to manage orders and the live menu.</p>
+      <p id="admin-file-notice" class="admin-file-notice" hidden>This file cannot connect to the database. Start the website first, then <a href="http://localhost:3000/admin">open the live admin dashboard</a>.</p>
+      <form id="admin-login-form" class="admin-form">
+        <label>Email address<input name="email" type="email" autocomplete="username" required maxlength="254"></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+        <button class="button button-dark" type="submit">Sign in</button>
+      </form>
+      <p id="login-message" class="inline-message" role="status"></p>
+    </section>
+
+    <section id="admin-dashboard" hidden>
+      <div class="admin-heading">
+        <div><p class="eyebrow">OWNER WORKSPACE</p><h1>Operations</h1></div>
+        <span id="admin-welcome" class="admin-welcome"></span>
+      </div>
+      <section class="store-control" aria-labelledby="store-status-title">
+        <div class="store-control-copy">
+          <span id="store-status-indicator" class="store-status-indicator" aria-hidden="true"></span>
+          <div><p class="eyebrow">ORDER INTAKE</p><h2 id="store-status-title">Checking store status</h2><p id="store-status-description" class="muted-copy">Loading the latest order setting.</p></div>
+        </div>
+        <button class="button button-outline" id="store-status-toggle" type="button" disabled>Loading status</button>
+      </section>
+      <p id="store-status-message" class="inline-message" role="status"></p>
+      <nav class="admin-tabs" aria-label="Admin sections">
+        <button type="button" data-view="orders" aria-current="page">Orders</button>
+        <button type="button" data-view="menu">Menu</button>
+        <button type="button" data-view="categories">Categories</button>
+        <button type="button" data-view="zones">Delivery zones</button>
+        <button type="button" data-view="sales">Sales</button>
+      </nav>
+
+      <section class="admin-view" id="view-orders">
+        <div class="admin-section-heading"><div><p class="eyebrow">ORDER QUEUE</p><h2>Incoming orders</h2></div><div class="admin-controls"><label class="sr-label" for="order-status-filter">Filter by status</label><select id="order-status-filter"><option value="">All statuses</option><option>Pending</option><option>Preparing</option><option>Out for Delivery</option><option>Delivered</option><option>Cancelled</option></select><button class="button button-outline" type="button" data-refresh="orders">Refresh</button></div></div>
+        <div id="order-counts" class="count-strip" aria-live="polite"></div>
+        <div id="orders-table" class="table-wrap"></div>
+        <p id="orders-message" class="inline-message" role="status"></p>
+      </section>
+
+      <section class="admin-view" id="view-menu" hidden>
+        <div class="admin-section-heading"><div><p class="eyebrow">CATALOG</p><h2>Menu items</h2></div><div class="admin-controls"><label class="sr-label" for="menu-admin-search">Search menu</label><input id="menu-admin-search" type="search" placeholder="Search menu"><button class="button button-dark" type="button" id="new-menu-item">Add menu item</button></div></div>
+        <div id="menu-admin-list" class="admin-record-list"></div>
+        <p id="menu-admin-message" class="inline-message" role="status"></p>
+      </section>
+
+      <section class="admin-view" id="view-categories" hidden>
+        <div class="admin-section-heading"><div><p class="eyebrow">MENU STRUCTURE</p><h2>Categories</h2></div></div>
+        <form id="new-category-form" class="inline-create-form"><label>Category name<input name="category_name" required maxlength="80"></label><label>Description<input name="description" maxlength="1000"></label><label>Display order<input name="display_order" type="number" value="0"></label><button class="button button-dark" type="submit">Add category</button></form>
+        <div id="category-admin-list" class="admin-record-list"></div>
+        <p id="category-message" class="inline-message" role="status"></p>
+      </section>
+
+      <section class="admin-view" id="view-zones" hidden>
+        <div class="admin-section-heading"><div><p class="eyebrow">DELIVERY SETTINGS</p><h2>Delivery zones</h2></div></div>
+        <form id="new-zone-form" class="inline-create-form"><label>Zone name<input name="zone_name" required maxlength="100"></label><label>Delivery fee (PKR)<input name="delivery_fee" type="number" min="0" step="0.01" required></label><label>Coverage notes<input name="coverage_notes" maxlength="1000"></label><button class="button button-dark" type="submit">Add zone</button></form>
+        <div id="zone-admin-list" class="admin-record-list"></div>
+        <p id="zone-message" class="inline-message" role="status"></p>
+      </section>
+
+      <section class="admin-view" id="view-sales" hidden>
+        <div class="admin-section-heading"><div><p class="eyebrow">PERFORMANCE</p><h2>Delivered order summary</h2></div></div>
+        <form id="sales-form" class="sales-filter"><label>From<input name="from" type="date" required></label><label>To<input name="to" type="date" required></label><button class="button button-dark" type="submit">View summary</button></form>
+        <div id="sales-totals" class="sales-totals"></div>
+        <div id="sales-table" class="table-wrap"></div>
+        <p class="sales-disclaimer">Values reflect orders marked Delivered. Cash on Delivery collection is not verified by this system.</p>
+        <p id="sales-message" class="inline-message" role="status"></p>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="surface-dialog admin-dialog" id="menu-item-dialog" aria-labelledby="menu-dialog-title">
+    <form id="menu-item-form" class="dialog-content">
+      <div class="dialog-heading"><div><p class="eyebrow">CATALOG</p><h2 id="menu-dialog-title">Add menu item</h2></div><button class="icon-close" type="button" data-close="menu-item-dialog" aria-label="Close">x</button></div>
+      <input type="hidden" name="item_id">
+      <div class="form-grid">
+        <label>Item name<input name="item_name" required maxlength="140"></label>
+        <label>Category<select name="category_id" required></select></label>
+        <label>Base price (PKR)<input name="base_price" type="number" min="0" step="0.01" required></label>
+        <label>Image URL or local image path <span class="optional-label">Optional</span><input name="image_url" type="text" maxlength="2000" placeholder="/images/creamy-cheesy-tikka-pizza.jpg"></label>
+        <label class="field-wide">Description<textarea name="description" maxlength="2000" rows="2"></textarea></label>
+        <label class="field-wide">Size options <span class="optional-label">One per line: name | price</span><textarea name="sizes_text" rows="3" placeholder="Regular | 850"></textarea></label>
+        <label class="field-wide">Add-ons <span class="optional-label">One per line: name | price</span><textarea name="addons_text" rows="3" placeholder="Extra cheese | 150"></textarea></label>
+        <label class="check-label field-wide"><input name="availability_status" type="checkbox" checked> In stock and available for ordering</label>
+      </div>
+      <p id="menu-item-form-message" class="inline-message" role="status"></p>
+      <div class="dialog-actions"><button class="button button-dark" type="submit">Save item</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="surface-dialog admin-dialog" id="order-detail-dialog" aria-labelledby="order-detail-title">
+    <div class="dialog-content"><div class="dialog-heading"><div><p class="eyebrow">ORDER DETAIL</p><h2 id="order-detail-title">Order</h2></div><button class="icon-close" type="button" data-close="order-detail-dialog" aria-label="Close">x</button></div><div id="order-detail-content"></div></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
